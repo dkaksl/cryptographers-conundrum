@@ -32,13 +32,15 @@ public class SolverTest {
 
 	@Test
 	public void inputNotDivisibleByThree() throws Exception {
-		exception.expect(Exception.class);
+		exception.expect(InputException.class);
+		exception.expectMessage(SubMessage.DIVISION_ERROR.message());
 		Solver.calculateTime("ab");
 	}
 
 	@Test
 	public void tooLargeInpu() throws Exception {
-		exception.expect(Exception.class);
+		exception.expect(InputException.class);
+		exception.expectMessage(SubMessage.MAX_LENGTH_EXCEEDED.message());
 		Solver.calculateTime(
 				"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 	}
