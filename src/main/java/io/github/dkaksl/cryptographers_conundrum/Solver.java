@@ -14,7 +14,7 @@ package io.github.dkaksl.cryptographers_conundrum;
 public class Solver {
 	public static int calculateTime(String cypher) throws InputException {
 		if (cypher.length() > 300) {
-			throw new InputException("length " + cypher.length(), SubMessage.MAX_LENGTH_EXCEEDED);
+			throw new InputException("length: " + cypher.length(), SubMessage.MAX_LENGTH_EXCEEDED);
 		}
 		if (cypher.length() % 3 != 0) {
 			throw new InputException("length: " + cypher.length(), SubMessage.DIVISION_ERROR);
