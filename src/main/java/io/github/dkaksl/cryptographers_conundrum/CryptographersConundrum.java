@@ -18,7 +18,7 @@ public class CryptographersConundrum {
 
 	public static void main(String[] args) throws InputException {
 		Scanner scanner = new Scanner(new BufferedInputStream(System.in));
-		while (scanner.hasNext()) {
+		while (scanner.hasNextLine()) {
 			String input = scanner.nextLine();
 			if (!input.isEmpty()) {
 				System.out.println(Solver.calculateTime(input));
