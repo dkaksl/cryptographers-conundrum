@@ -12,12 +12,12 @@ package io.github.dkaksl.cryptographers_conundrum;
  *
  */
 public class Solver {
-	public static int calculateTime(String cypher) throws Exception {
+	public static int calculateTime(String cypher) throws InputException {
 		if (cypher.length() > 300) {
-			throw new Exception("length is greater than 300");
+			throw new InputException("length " + cypher.length(), SubMessage.MAX_LENGTH_EXCEEDED);
 		}
 		if (cypher.length() % 3 != 0) {
-			throw new Exception("length is not divisible by 3");
+			throw new InputException("length: " + cypher.length(), SubMessage.DIVISION_ERROR);
 		}
 
 		int time = 0;

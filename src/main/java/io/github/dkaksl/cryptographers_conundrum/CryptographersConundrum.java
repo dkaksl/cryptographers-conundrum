@@ -16,7 +16,7 @@ import java.util.Scanner;
  */
 public class CryptographersConundrum {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws InputException {
 		Scanner scanner = new Scanner(new BufferedInputStream(System.in));
 		while (scanner.hasNext()) {
 			String input = scanner.nextLine();
